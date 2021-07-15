@@ -1,0 +1,4 @@
+﻿
+namespace pointOfSale.Skia.Gtk
+{
+}
