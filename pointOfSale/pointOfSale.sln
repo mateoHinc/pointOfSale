@@ -13,19 +13,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.iOS", "pointOfS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.UWP", "pointOfSale\pointOfSale.UWP\pointOfSale.UWP.csproj", "{2F448DD7-0C99-4E96-AB94-85DBFF8C78F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.Wasm", "pointOfSale\pointOfSale.Wasm\pointOfSale.Wasm.csproj", "{4CA7CD3B-24D2-4F21-A48C-6A68E2C877CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pointOfSale.Wasm", "pointOfSale\pointOfSale.Wasm\pointOfSale.Wasm.csproj", "{4CA7CD3B-24D2-4F21-A48C-6A68E2C877CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.macOS", "pointOfSale\pointOfSale.macOS\pointOfSale.macOS.csproj", "{358C099C-1DAD-451D-AD20-82B091DB3A42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.Skia.Wpf.Host", "pointOfSale\pointOfSale.Skia.Wpf.Host\pointOfSale.Skia.Wpf.Host.csproj", "{07DB6917-471F-4F8D-AB5E-DB4D6D436291}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pointOfSale.Skia.Wpf.Host", "pointOfSale\pointOfSale.Skia.Wpf.Host\pointOfSale.Skia.Wpf.Host.csproj", "{07DB6917-471F-4F8D-AB5E-DB4D6D436291}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.Skia.Wpf", "pointOfSale\pointOfSale.Skia.Wpf\pointOfSale.Skia.Wpf.csproj", "{4CF8DAE5-6BB1-4526-92B7-C365149A86F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pointOfSale.Skia.Wpf", "pointOfSale\pointOfSale.Skia.Wpf\pointOfSale.Skia.Wpf.csproj", "{4CF8DAE5-6BB1-4526-92B7-C365149A86F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.Skia.Gtk", "pointOfSale\pointOfSale.Skia.Gtk\pointOfSale.Skia.Gtk.csproj", "{4EB5DBCD-0BA0-4225-A211-13D856A8D45C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pointOfSale.Skia.Gtk", "pointOfSale\pointOfSale.Skia.Gtk\pointOfSale.Skia.Gtk.csproj", "{4EB5DBCD-0BA0-4225-A211-13D856A8D45C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.Skia.Tizen", "pointOfSale\pointOfSale.Skia.Tizen\pointOfSale.Skia.Tizen.csproj", "{3B83892D-482B-49CD-9084-9F029D10E932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pointOfSale.Skia.Tizen", "pointOfSale\pointOfSale.Skia.Tizen\pointOfSale.Skia.Tizen.csproj", "{3B83892D-482B-49CD-9084-9F029D10E932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pointOfSale.Api", "pointOfSale.Api\pointOfSale.Api.csproj", "{3AB50D9E-7EE6-4932-A05D-04CA4368FCC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pointOfSale.Api", "pointOfSale.Api\pointOfSale.Api.csproj", "{3AB50D9E-7EE6-4932-A05D-04CA4368FCC5}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
