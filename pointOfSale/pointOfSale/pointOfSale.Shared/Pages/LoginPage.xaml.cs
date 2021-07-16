@@ -1,4 +1,5 @@
 ﻿using pointOfSale.Helpers;
+using pointOfSale.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,7 +35,29 @@ namespace pointOfSale.Pages
                 return;
             }
 
-            MessageDialog messageDialog = new MessageDialog("Hell Yeah!", "ok");
+            Response response = await ApiService.LoginAsync(new LoginRequest
+            {
+                Email = EmailTextBox.Text,
+                Password = PasswordPasswordBox.Password
+            });
+
+            MessageDialog messageDialog;
+            if (!response.IsSuccess)
+            {
+                messageDialog = new MessageDialog(response.Message, "Error");
+                await messageDialog.ShowAsync();
+                return;
+            }
+
+            User user = (User)response.Result;
+            if(user == null)
+            {
+                messageDialog = new MessageDialog("Usuario o Contraseña Incorrectos", "Error");
+                await messageDialog.ShowAsync();
+                return;
+            }
+
+            messageDialog = new MessageDialog($"Bienvenido: {user.FullName}", "ok");
             await messageDialog.ShowAsync();
         }
 
@@ -44,7 +67,7 @@ namespace pointOfSale.Pages
 
             if (string.IsNullOrEmpty(EmailTextBox.Text))
             {
-                messageDialog = new MessageDialog("Debes ingresar tu email");
+                messageDialog = new MessageDialog("Debes ingresar tu email", "Error");
                 await messageDialog.ShowAsync();
                 return false;
             }
@@ -58,7 +81,7 @@ namespace pointOfSale.Pages
 
             if (PasswordPasswordBox.Password.Length < 6)
             {
-                messageDialog = new MessageDialog("Debes ingresar tu contraseña");
+                messageDialog = new MessageDialog("Debes ingresar tu contraseña", "Error");
                 await messageDialog.ShowAsync();
                 return false;
             }

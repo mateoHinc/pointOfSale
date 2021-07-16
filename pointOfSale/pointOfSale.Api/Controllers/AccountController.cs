@@ -73,6 +73,7 @@ namespace pointOfSale.Api.Controllers
             return NoContent();
         }
 
+        //https://localhost:44393/
         [HttpPost]
         [Route("Login")]
         public async Task<ActionResult<User>> Login(LoginRequest model)

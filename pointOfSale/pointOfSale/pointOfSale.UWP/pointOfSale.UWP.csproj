@@ -11,6 +11,9 @@
       <Version>6.2.11</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml" Version="2.5.0" />
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Uno.Core" Version="2.4.0" />
     <PackageReference Include="Uno.UI" Version="3.8.13" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
@@ -19,7 +22,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>2f448dd7-0c99-4e96-ab94-85dbff8c78f7</ProjectGuid>
+    <ProjectGuid>{2F448DD7-0C99-4E96-AB94-85DBFF8C78F7}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>pointOfSale</RootNamespace>
