@@ -1,4 +1,5 @@
-﻿using pointOfSale.Helpers;
+﻿using pointOfSale.Components;
+using pointOfSale.Helpers;
 using pointOfSale.Models;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,8 @@ namespace pointOfSale.Pages
         public LoginPage()
         {
             InitializeComponent();
+            EmailTextBox.Text = "and@yopmail.com";
+            PasswordPasswordBox.Password = "123456";
         }
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -35,11 +38,14 @@ namespace pointOfSale.Pages
                 return;
             }
 
+            Loader loader = new Loader("Por Favor Espere...");
+            loader.Show();
             Response response = await ApiService.LoginAsync(new LoginRequest
             {
                 Email = EmailTextBox.Text,
                 Password = PasswordPasswordBox.Password
             });
+            loader.Close();
 
             MessageDialog messageDialog;
             if (!response.IsSuccess)
@@ -57,8 +63,7 @@ namespace pointOfSale.Pages
                 return;
             }
 
-            messageDialog = new MessageDialog($"Bienvenido: {user.FullName}", "ok");
-            await messageDialog.ShowAsync();
+            Frame.Navigate(typeof(MainPage), user);
         }
 
         private async Task<bool> ValidForm()
